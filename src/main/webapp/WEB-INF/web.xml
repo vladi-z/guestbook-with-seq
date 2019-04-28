@@ -13,4 +13,10 @@
         <auth-method>BASIC</auth-method>
         <realm-name>guest-book</realm-name>
     </login-config>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>/*</url-pattern>
+            <page-encoding>utf8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
 </web-app>
