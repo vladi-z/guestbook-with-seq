@@ -33,11 +33,12 @@ public class GuestBookMessagesServiceTest {
 
     @Test
     public void addMessage() {
-        assertEquals(messagesService.getMessages().size(), 0);
+        int messagesCount = messagesService.getMessages().size();
         GuestBookMessage msg = new GuestBookMessage();
         msg.setUsername("test");
         msg.setMessage("test message");
         messagesService.addMessage(msg);
-        assertEquals(messagesService.getMessages().size(), 1);
+        messagesCount++;
+        assertEquals(messagesService.getMessages().size(), messagesCount);
     }
 }
