@@ -1,8 +1,7 @@
 <%@ page import="ru.zmff.petprojects.guestbook.GuestBookMessage" %>
-<%@ page import="java.util.LinkedList" %>
 <%
     //noinspection unchecked
-    LinkedList<GuestBookMessage> messages = (LinkedList<GuestBookMessage>) request.getAttribute("messages");
+    Iterable<GuestBookMessage> messages = (Iterable<GuestBookMessage>) request.getAttribute("messages");
 %>
 
 <html>
