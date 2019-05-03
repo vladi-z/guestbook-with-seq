@@ -13,8 +13,10 @@ public class FunctionalTest {
     @Deployment
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-                .addClasses(GuestBookMessagesService.class)
+                .addClass(GuestBookMessagesService.class)
+                .addClass(GuestBookMessage.class)
                 .addAsWebInfResource(new File("src/main/webapp/WEB-INF/web.xml"), "web.xml")
+                .addAsResource("META-INF/persistence.xml")
                 .addAsWebResource(new File("src/main/webapp/guestbook.jsp"), "guestbook.jsp") // added to avoid file removal
                 .addAsWebResource(new File("src/main/webapp/index.jsp"), "index.jsp")
                 .addAsWebInfResource(new File("src/main/webapp/WEB-INF/glassfish-web.xml"), "glassfish-web.xml")
