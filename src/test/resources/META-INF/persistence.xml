@@ -6,10 +6,17 @@
              version="2.2">
     <persistence-unit name="default">
         <jta-data-source>jdbc/GuestBookDB</jta-data-source>
+    </persistence-unit>
+
+    <!--USE FOR DB CHANGESET GENERATION ONLY-->
+<!--
+    <persistence-unit name="default">
+        <jta-data-source>jdbc/GuestBookDBAutoCreate</jta-data-source>
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
             <property name="javax.persistence.schema-generation.create-source" value="metadata" />
             <property name="javax.persistence.schema-generation.drop-source" value="metadata" />
         </properties>
     </persistence-unit>
+-->
 </persistence>

@@ -14,6 +14,7 @@ public class FunctionalTest {
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
                 .addClass(GuestBookMessagesService.class)
+                .addClass(LiquibaseBootstrap.class)
                 .addClass(GuestBookMessage.class)
                 .addAsWebInfResource(new File("src/main/webapp/WEB-INF/web.xml"), "web.xml")
                 .addAsResource("META-INF/persistence.xml")
