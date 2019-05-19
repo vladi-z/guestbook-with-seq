@@ -1,3 +1,9 @@
+/*
+ * Copyright (C) 2019, Vladislav Ziminov <zmff@zmff.ru>. All Rights Reserved.
+ * This file is a part of project guestbook-with-seq.
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ */
+
 package ru.zmff.petprojects.guestbook;
 
 import lombok.Getter;
